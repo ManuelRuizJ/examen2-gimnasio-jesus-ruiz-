@@ -1,0 +1,21 @@
+codigo,disciplina,instructor,dia,hora,cupo,estado
+YOG-01,Yoga,Mariana Cid,lun,08:00,15,activa
+YOG-02,Yoga,Mariana Cid,mie,08:00,15,activa
+SPN-01,Spinning,Hugo Beltrán,lun,07:00,20,activa
+CRF-01,Crossfit,Erick Paredes,lun,19:00,12,activa
+PIL-01,Pilates,Laura Quintero,mar,09:00,8,activa
+BOX-01,Box,Manuel Ochoa,mar,20:00,10,activa
+SPN-02,Spinning,Hugo Beltrán,mar,19:00,20,activa
+CRF-02,Crossfit,Erick Paredes,mie,07:00,12,activa
+PIL-02,Pilates,Laura Quintero,jue,09:00,8,activa
+BOX-02,Box,Manuel Ochoa,jue,20:00,10,activa
+SPN-03,Spinning,Diana Lozano,jue,19:00,20,activa
+YOG-03,Yoga,Rocío Estrada,vie,19:00,12,activa
+CRF-03,Crossfit,Erick Paredes,vie,07:00,12,activa
+BOX-03,Box,Manuel Ochoa,vie,20:00,10,cancelada
+PIL-03,Pilates,Laura Quintero,sab,11:00,8,activa
+YOG-04,Yoga,Rocío Estrada,sab,10:00,20,activa
+SPN-04,Spinning,Diana Lozano,sab,09:00,16,activa
+CRF-04,Crossfit,Iván Treviño,sab,12:00,12,activa
+PIL-04,Pilates,Laura Quintero,mie,18:00,8,activa
+BOX-04,Box,Iván Treviño,mie,20:00,10,activa
