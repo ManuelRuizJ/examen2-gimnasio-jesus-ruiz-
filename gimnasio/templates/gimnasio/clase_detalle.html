@@ -1,0 +1,17 @@
+{% extends "gimnasio/base.html" %}
+{% block titulo %}{{ clase.codigo }}{% endblock %}
+{% block contenido %}
+<h1>{{ clase.codigo }} {{ clase.disciplina }}</h1>
+<p>{{ clase.get_dia_display }} {{ clase.hora|time:"H:i" }} · {{ clase.instructor }} · {{ clase.get_estado_display }}</p>
+<h2>Inscritos ({{ inscritos|length }} de {{ clase.cupo }})</h2>
+<table>
+  <thead><tr><th>Número</th><th>Nombre</th><th>Membresía vence</th></tr></thead>
+  <tbody>
+    {% for socio in inscritos %}
+    <tr><td>{{ socio.numero }}</td><td>{{ socio.nombre }}</td><td>{{ socio.vence_membresia }}</td></tr>
+    {% empty %}
+    <tr><td colspan="3">Nadie inscrito todavía.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

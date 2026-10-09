@@ -1,0 +1,23 @@
+{% extends "gimnasio/base.html" %}
+{% block titulo %}Buscar clases{% endblock %}
+{% block contenido %}
+<h1>Buscar clases</h1>
+<form method="get">
+  <input type="text" name="q" value="{{ q }}" placeholder="Disciplina, instructor o socio">
+  <button type="submit">Buscar</button>
+</form>
+{% if q %}
+<p>{{ clases|length }} resultado(s) para "{{ q }}"</p>
+<table>
+  <thead><tr><th>Código</th><th>Disciplina</th><th>Día</th><th>Hora</th><th>Instructor</th></tr></thead>
+  <tbody>
+    {% for clase in clases %}
+    <tr>
+      <td>{{ clase.codigo }}</td><td>{{ clase.disciplina }}</td><td>{{ clase.get_dia_display }}</td>
+      <td>{{ clase.hora|time:"H:i" }}</td><td>{{ clase.instructor }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}
