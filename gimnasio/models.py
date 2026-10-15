@@ -58,6 +58,7 @@ class Clase(models.Model):
     hora = models.TimeField()
     cupo = models.PositiveSmallIntegerField()
     estado = models.CharField(max_length=10, choices=Estado.choices, default=Estado.ACTIVA)
+    sala = models.CharField(max_length=30, blank=True)
     inscritos = models.ManyToManyField(Socio, related_name="clases", blank=True)
 
     objects = ClaseQuerySet.as_manager()

@@ -24,5 +24,6 @@ class ClaseSerializer(serializers.ModelSerializer):
             "hora",
             "cupo",
             "estado",
+            "sala",
             "inscritos",
         ]

@@ -42,6 +42,7 @@ class Command(BaseCommand):
                     "hora": time.fromisoformat(fila["hora"]),
                     "cupo": int(fila["cupo"]),
                     "estado": fila["estado"],
+                    "sala": fila["sala"],
                 },
             )
         self.stdout.write(f"Clases: {Clase.objects.count()}")
