@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Clase, Socio
+from .models import Clase, Socio, Disciplina
 
 
 class SocioSerializer(serializers.ModelSerializer):
@@ -10,7 +10,10 @@ class SocioSerializer(serializers.ModelSerializer):
 
 
 class ClaseSerializer(serializers.ModelSerializer):
-    disciplina = serializers.StringRelatedField()
+    disciplina = serializers.SlugRelatedField(
+        slug_field="nombre",
+        queryset=Disciplina.objects.all(),
+    )
     inscritos = serializers.SlugRelatedField(many=True, read_only=True, slug_field="numero")
 
     class Meta:
