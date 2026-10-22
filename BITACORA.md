@@ -7,7 +7,7 @@ Copia el bloque de abajo una vez por cada falla que encuentres. Llénalo en el m
 
 ---
 
-## Falla 1 (Parte 1 )
+## Falla 1, 2 y 3 (Parte 1 )
 
 **Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
 No estaba isntalada gimansio en settigns.py, se importo y se soluciono el primero progrlema de mirgrate, se relaizo la migracion, y se corrigio el codigo de cargar_datos, se cmabio la funcion de create() a get_or_create() para las que ya estaban creadas
@@ -34,16 +34,16 @@ Corrección en el comando de carga de datos para utilizar get_or_create().
 
 ---
 
-## Falla N (Ticket 1 )
+## Falla 4 (Ticket 1 )
 
 **Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
-al correr aparecia un error
+al abrir la pagina principal aparecia un error relacionado con el nombre de una url
 
 **Causa raíz:** por qué pasaba. Explícalo como se lo explicarías a Kevin.
 estaba incorrecto el url de refencia a url.py, estaba como detalle_clase y era clase_detalle
 
 **Corrección:** qué cambiaste y en qué archivo(s).
-se cambio el orden
+se cambio el orden de detalle_clase a clase_detalle
 
 **Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
 se cargo correctamente el inicio
@@ -70,23 +70,23 @@ correcion al nombre de urll de detalle_clase a clase_detalle
 
 ---
 
-## Falla N (Ticket 2 )
+## Falla 5 (Ticket 2 )
 
 **Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
-al buscar clases con solo espacio, mandaba todos, aunque estuvieran llenas o canceladas
+al buscar clases con espacio disponible, mandaba todos, aunque estuvieran llenas o canceladas
 
 **Causa raíz:** por qué pasaba. Explícalo como se lo explicarías a Kevin.
-un _lte en ves de un _lt y falta dee estado ACTIVA
+un _lte en ves de un _lt y faltaba el filtro de clases que son de estado ACTIVA
 
 **Corrección:** qué cambiaste y en qué archivo(s).
-se cambio models.py en el .filter()
+se cambio models.py en el .filter() en el metodo con_lugar()
 
 **Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
+se revido en la pagina y se uso el filtor en ?con_ligar=1, y ahora si filtraba exitosamente las clases que estaban con estado activo y que aun tenian cupo
 
 **Commit:** el mensaje del commit de esta corrección.
+correcion lugar minimo, se usaba _lte en el filter, al parecer solo era porque sobreba una e (_lt es el correcto), ademas se agrego el esatado, para que no aparezcan las que tengan un estado Cancelada
 
-
----
 
 ---
 
