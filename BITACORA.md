@@ -134,6 +134,29 @@ correcion al nombre de urll de detalle_clase a clase_detalle
 
 ---
 
+## F1 
+
+**Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
+/api/clases/{id}/inscribir, validando que la inscripcion fiera valida
+
+**Causa raíz:** por qué pasaba. Explícalo como se lo explicarías a Kevin.
+LA api todavia no tenia una accion especifica para osncribir socios ni las validaciones necesarias
+
+**Corrección:** qué cambiaste y en qué archivo(s).
+En api_views se agrega el metodo  inscribir  mediante el metodo post, se implementarion validacion para comprobar que se de el numero del socio, que exite, que la calse no este ancelada o que no este inscrito ya, si alguna validacionfalla da un error 400, sit odo pasa registra al socio y devuelve 200
+
+**Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
+incirbir al nuevo socio
+[22/Oct/2026 15:33:31] "POST /api/clases/1/inscribir/ HTTP/1.1" 200 253
+
+intentar inciribir al mismo socio de nuevo
+Bad Request: /api/clases/1/inscribir/
+[22/Oct/2026 15:36:37] "POST /api/clases/1/inscribir/ HTTP/1.1" 400 53
+
+
+**Commit:** el mensaje del commit de esta corrección.
+inscripcion de socios a clases
+---
 ## Declaración de uso de IA
 
 Marca una opción.
