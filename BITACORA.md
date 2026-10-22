@@ -90,40 +90,23 @@ correcion lugar minimo, se usaba _lte en el filter, al parecer solo era porque s
 
 ---
 
-## Falla N (Ticket 3 )
+## Falla 6 (Ticket 3 )
 
 **Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
-al correr aparecia un error
+al buscar la clase yoga en el bucador aparecian 39 resultados, eunque solo se esperaban 4 (clases)
 
 **Causa raíz:** por qué pasaba. Explícalo como se lo explicarías a Kevin.
-estaba incorrecto el url de refencia a url.py, estaba como detalle_clase y era clase_detalle
+La consulte bussca en los nombres de quienes estan incritos, esto traia a todas las veces que estaban incritos sin importar si esa clase ya la habia traido
 
 **Corrección:** qué cambiaste y en qué archivo(s).
-se cambio el orden
+se agrego la funcion .distinct() a la funcion clase_buscar para evitar que se repitan
 
 **Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
-se cargo correctamente el inicio
-(venv) ➜  examen2 git:(main) ✗ python manage.py runserver
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-October 22, 2026 - 12:57:28
-Django version 6.1.2, using settings 'config.settings'
-Starting WSGI development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
-For more information on production servers see: https://docs.djangoproject.com/en/6.1/howto/deployment/
-[22/Oct/2026 12:57:34] "GET / HTTP/1.1" 200 5483
-
+ahora al filtrar por ?q=yoga se filtra correctamente las clases sin repetirse
 
 **Commit:** el mensaje del commit de esta corrección.
-correcion al nombre de urll de detalle_clase a clase_detalle
+se agrego la funcion .distinct() en la funcion clase_buscar, que srive para eliminar filas duplicadas en una cosnulta
 
----
-
-no me dio tiempo de acpmpletar la bitacora, acompletare el examen en otroa rama, perdon y gracias jeje
 
 ---
 
