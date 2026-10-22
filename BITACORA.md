@@ -16,28 +16,21 @@ No estaba isntalada gimansio en settigns.py, se importo y se soluciono el primer
 lo explique en sintoma perdon por la mala orfanizacion
 
 **Corrección:** qué cambiaste y en qué archivo(s).
-
+se agrego gimansio a installled_aps en settings.py
+Se hixo las migtraciones para actulizar la db
+se cambio el create() por get_or_create() en el comnado de cargar_datos para evitar errores cuadno una disciplina ya existe
 
 **Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
+Se hicieorn las migraciones con ➜  examen2 git:(bitacora-completa) ✗ python manage.py makemigrations gimnasio y se verifico que en cada paso iniciara sin errores
 
 
 **Commit:** el mensaje del commit de esta corrección.
-corrreccion en el comando de cargar datos, antes solo lo creaba sin importar si ya existia, por eso se cambio a get_or_create
-ManuelRuizJ
-ManuelRuizJ
-committed
-1 hour ago
-migracion correcta
-ManuelRuizJ
-ManuelRuizJ
-committed
-1 hour ago
 fix: instalar app en settings.py
-ManuelRuizJ
-ManuelRuizJ
-committed
-1 hour ago
----
+
+migracion correcta
+
+Corrección en el comando de carga de datos para utilizar get_or_create().
+
 
 ---
 
